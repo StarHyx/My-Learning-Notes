@@ -1,2 +1,2 @@
-# Reading
-My Reading Notes
+# Learning
+My Learning Notes
