@@ -13,3 +13,18 @@
 ## 换行
 
 可以直接用`<br>`来控制换行
+
+## 生成目录树
+
+使用`tree`命令
+忽略某些项：tree -I
+只打印某些项： tree -P
+
+## Task示例
+
+- [ ] Eat
+- [x] Code
+  - [x] HTML
+  - [x] CSS
+  - [x] JavaScript
+- [ ] Sleep
