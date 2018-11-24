@@ -1,13 +1,13 @@
 # 一些有用的终端命令
 
-将C程序转换为汇编程序
+#### 将C程序转换为汇编程序
 
 ```shell
 gcc -S -masm=intel example.c -o example.asm  # intel语法的汇编
 gcc -S -O0 -o example.s example.c # .s结尾的汇编
 ```
 
-### gcc编译步骤：
+#### gcc编译步骤：
 
 1.预处理
 
@@ -33,7 +33,7 @@ gcc -c test.s -o test.o
 gcc test.o -o test
 ```
 
-5.tar.xz后缀文件的解压（编译linux内核中使用过）
+#### tar.xz后缀文件的解压（编译linux内核中使用过）
 
 ```shell
 xz -d filename.tar.xz
