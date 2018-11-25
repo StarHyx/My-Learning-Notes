@@ -33,6 +33,12 @@ gcc -c test.s -o test.o
 gcc test.o -o test
 ```
 
+5.一步到位
+
+```shell
+gcc test.c -o test
+```
+
 #### tar.xz后缀文件的解压（编译linux内核中使用过）
 
 ```shell
