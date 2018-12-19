@@ -379,3 +379,10 @@ console.log(deep[0] === objects[0]);
 
 
 <img src='./image/prototype.png' width=500px>
+
+所以原型链就是多个对象通过 `__proto__` 的方式连接了起来。为什么`obj`可以访问到`valueOf`函数，就是因为`obj`通过原型链找到了`valueOf`函数。
+
++ Object 是所有对象的原型，所有对象都可以通过 `__proto__` 找到它
++ Function 是所有函数的原型，所有函数都可以通过`__proto__` 找到它
++ 函数的 `prototype` 是一个对象
++ 对象的 `__proto__` 属性指向原型， `__proto__` 将对象和原型连接起来组成了原型链
