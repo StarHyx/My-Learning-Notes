@@ -9,8 +9,9 @@ function deepClone(obj) {
 	}
 
 	let isArray = Array.isArray(obj);
-  let newObj = isArray ? [...obj] : { ...obj };
-  // 静态方法 Reflect.ownKeys() 返回一个由目标对象自身的属性键组成的数组。
+	let newObj = isArray ? [...obj] : { ...obj };
+	// 静态方法 Reflect.ownKeys() 返回一个由目标对象自身的属性键组成的数组。
+	// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 	Reflect.ownKeys(newObj).forEach(key => {
 		newObj[key] = isObject(obj[key]) ? deepClone(obj[key]) : obj[key];
 	});
