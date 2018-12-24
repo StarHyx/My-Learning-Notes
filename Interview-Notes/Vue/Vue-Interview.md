@@ -2,6 +2,16 @@
 
 ## 常见问题
 
+### 生命周期
+
+Vue.js 生命周期 主要有 8 个阶段：
+
++ 创建前 / 后（beforeCreate / created）：在 beforeCreate 阶段，Vue 实例的挂载元素 el 和数据对象 data 都为 undefined，还未初始化。在 created 阶段，Vue 实例的数据对象 data 有了，el 还没有。
++ 载入前 / 后（beforeMount / mounted）：在 beforeMount 阶段，Vue 实例的 $el 和 data 都初始化了，但还是挂载之前为虚拟的 DOM 节点，data 尚未替换。在 mounted 阶段，Vue 实例挂载完成，data 成功渲染。
++ 更新前 / 后（beforeUpdate / updated）：当 data 变化时，会触发 beforeUpdate 和 updated 方法。这两个不常用，且不推荐使用。
++ 销毁前 / 后（beforeDestroy / destroyed）：beforeDestroy 是在 Vue 实例销毁前触发，一般在这里要通过 removeEventListener 解除手动绑定的事件。实例销毁后，触发 destroyed。
+
+
 ### v-show 与 v-if 区别
 
 `v-show` 只是 CSS 级别的 `display: none`; 和 `display: block`; 之间的切换，而 `v-if `决定是否会选择代码块的内容（或组件）。
